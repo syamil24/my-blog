@@ -49,13 +49,13 @@ There’s a popular quote: “The hardest part of programming is naming things.�
 ### 4. Lack of DTO, everything is "STRING"
 Why use Data Transfer Objects (DTOs) when you can just return everything as a String? This seems to have been the mentality of the original developers. Sure, you can return strings, but this invites a host of issues: hardcoding JSON keys, making it harder for the IDE to assist, and generally slowing down development.
 
-![Desktop View](/assets/refactor-blog/string-method.png)
+![Desktop View](/assets/refactor-blog/string-function.png)
 
 Instead of transforming data into strings manually, use DTOs. Spring Boot can handle most of the heavy lifting, and for custom parsing or mapping, libraries like MapStruct or GSON can get the job done with much less effort.
 
 ### 5. Void method everywhere
 
-![Desktop View](/assets/refactor-blog/void-method.png)
+![Desktop View](/assets/refactor-blog/void-function.png)
 
 If everything isn’t a String, then it’s a void. I’m not saying void methods are inherently bad, but they don’t give you any feedback on whether a method was successful or not. Without a return object, you’re left guessing what happened.
 
