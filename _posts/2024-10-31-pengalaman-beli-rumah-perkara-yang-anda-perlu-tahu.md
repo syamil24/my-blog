@@ -32,7 +32,7 @@ Sudah tentu lain rumah lain proses, konteks rumah yg aku beli dekat sini ialah r
 
 #### SPA Agreement (Sale & Purchase Agreement)
 
-![Desktop View](/assets/refactor-blog/SPA.png)
+![Desktop View](/assets/rumah/SPA.png)
 
 - Ada org sebut S&P, ada org SPA, tapi ia merujuk perkara yang sama je. Perkara pertama buat agreement dulu antara penjual dan pembeli. Penting ada ni untuk manfaat kedua2 belah pihak, penjual dan pembeli. Contoh penjual tak boleh naikkan harga rumah tiba2 lepas dah buat agreement, naikkan harga deposit dan sebagainya. Masa aku dulu benda ni ajen aku dah carikan lawyer siap2 untuk handle benda ni, so apa2 dorg dua ni yg setelkan bab agreement, berapa banyak perlu deposit ke penjual dsb. Aku cuma tinggal tandatangan and sediakan duit bila diminta. Kalau tak pakai lawyer atau ejen, kene banyak usaha sikit cari template agreement, tak perlu panjang2, ikut apa yg perlu sahaja macam duit booking(deposit) berapa banyak, tarikh akhir bayar sekian2.
 - Kalau kau tak tau nak cari lawyer mana boleh lah tanya2 lawyer aku mcm dalam gambar tu, Alhamdulillah smooth je process dia buat keje dari loan, consent, S&P ha semua lah. Dari segi fee mahal murah aku tak pandai, mana lah aku tau lawyer mana yg murah ke mahal woi...ni first time aku amik lawyer.
