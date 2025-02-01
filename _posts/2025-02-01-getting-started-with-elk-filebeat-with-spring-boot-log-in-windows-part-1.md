@@ -118,11 +118,11 @@ Below is my Spring Boot logback.xml file. I simplified what is the configuration
 I had created a gists here for Filebeat configuration.: (https://gist.github.com/syamil24/2a0b06251d33e4cb87d7bf7a2d56d614)
 You can refer below on what are the things need to changed. If your log file format is different than my logback.xml configuration, then you can take a look at tokenizer field and change accordingly. You can refer below pic on what content need to change accordingly especially on your log file paths.
 
-![Desktop View](/assets/elk/filebeat-config-1.png)
+![Desktop View](/assets/elk/filebeat-config-.png)
 
 You may also need to change your logstash ip address. If you are using localhost just replace with **127.0.0.1:5044** or **localhost:5044** at this part.
 
-![Desktop View](/assets/elk/filebeat--config-2.png)
+![Desktop View](/assets/elk/filebeat-config-2.png)
 
 ### Viewing Logs in your Kibana
 
