@@ -1,10 +1,10 @@
 ---
 title: Getting Started With ELK, Filebeat With Spring Boot log in Windows Part 1
 created: '2024-12-07T06:51:36.809Z'
-modified: '2025-02-02T04:17:06.115Z'
+modified: '2025-02-01T04:17:06.115Z'
 categories: [Programming, IT, coding, Java]
 tags: [coding, IT]
-date: '2025-02-02'
+date: '2025-02-01'
 ---
 
 I wrote this article because I found that it's quite hard to find a starter guide for someone to use ELK and integrate it with their Spring Boot log file especially in Windows OS (Yes I'm not very practical here to host it in Windows but I can't run from my company current infra I guess). It's not necessarily Spring Boot logfile, but yeah to find article related to this topic with a much simpler and quick guide one is very difficult based on my experience. In this guide I'm using ELK stack including Filebeat in my Windows 11 machine to fetch my Spring Boot log file and display it on the web. So let's just deep dive into it.
