@@ -1,10 +1,9 @@
 ---
-title: Getting Started ELK, Filebeat With Spring Boot log in Windows Part 1
+title: Getting Started With ELK, Filebeat With Spring Boot log in Windows Part 1
 created: '2024-12-07T06:51:36.809Z'
 modified: '2025-02-02T04:17:06.115Z'
 categories: [Programming, IT, coding, Java]
 tags: [coding, IT]
-
 date: '2025-02-02'
 ---
 
