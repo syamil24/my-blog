@@ -141,8 +141,10 @@ Now we are on the final section of the first part of this tutorial. Let's log in
 
 Congrats you've managed setting up your own ELK stack with Filebeat for monitoring purposes. This is just a basic setup in order to test if everything is working fine on your infra, there's a lot more work to be done such as SSL configuration, scaling it to multiple nodes based on your needs, and aggregating multiple log files such as microservices log into ELK. Oh yes just be remindful that by default Elasticsearch will use up to 32GB of your memory, hence make sure you have plenty of resources in order to scale. You can change this later at **config/jvm.options**
 
+Indeed it is consuming your 32GB of memory...
+
+
 ![Desktop View](/assets/elk/elastic-memory.jpg)
-Indeed it is consuming your 32GB of memory
 
 In Part 2 of this article I will show on how to add multiple log files into the same Filebeat and ELK instance but with different index. This will be useful if you have a microservices application and want to aggreagate your multiple log files in the same place.
 
