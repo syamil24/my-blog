@@ -16,10 +16,10 @@ timezone:
 
 title: Syamil Thoughts # the main title
 
-tagline: Let see what Syamil is thinking and writing # it will display as the subtitle
+tagline: "Inside Syamil’s Mind: Thoughts & Writings Unfiltered!" # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Let's read on what Syamil is thinking
+  My random Thoughts and just sharing what I know to people who may benefit from it.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,11 +38,11 @@ social:
   email: syamil2498@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    - http://instagram.com/syamil24 # change to your Twitter homepage
     - https://github.com/syamil24 # change to your GitHub homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://syamilthoughts.com
+    - https://www.linkedin.com/in/ahmad-syamil
 
 # Site Verification Settings
 webmaster_verifications:
