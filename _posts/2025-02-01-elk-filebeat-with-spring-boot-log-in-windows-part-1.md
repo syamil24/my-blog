@@ -2,8 +2,8 @@
 title: Getting Started With ELK, Filebeat With Spring Boot log in Windows Part 1
 created: '2024-12-07T06:51:36.809Z'
 modified: '2025-02-01T04:17:06.115Z'
-categories: [Programming, IT, coding, Java]
-tags: [coding, IT]
+categories: [Programming, IT, coding, Java, devops]
+tags: [coding, IT, devlops]
 date: '2025-02-01'
 ---
 
@@ -13,9 +13,9 @@ I wrote this article because I found that it's quite hard to find a starter guid
 
 1. Download ELK stack
    First thing first you need to have all three ELK stack (Elastic Search, Logstash, Kibana) installed in your machine. You can download all of it below and extract the compressed file.
-    https://www.elastic.co/downloads/elasticsearch
-    https://www.elastic.co/downloads/logstash
-    https://www.elastic.co/downloads/kibana
+    - https://www.elastic.co/downloads/elasticsearch
+    - https://www.elastic.co/downloads/logstash
+    - https://www.elastic.co/downloads/kibana
 
 2. Download Filebeat
    https://www.elastic.co/downloads/beats/filebeat
@@ -25,16 +25,32 @@ I wrote this article because I found that it's quite hard to find a starter guid
 
 ### Configuring ElasticSearch
 
-To run Elastic Search on Windows OS, we need to run in cmd `elasticsearch.bat` inside **bin** folder. It depends on your OS performance, it might take minutes in order for everything to be perfectly run. If you see in your logs, during first time running it will show your password to be logged in inside Kibana. If you didn't lucky enough or can't see the details in the log, you need to run command `elasticsearch-reset-password -u elastic` . This will reset elastic user password with a new one. This password will be used for you to log in Kibana later and for your logstash configuration as well..
+To start Elasticsearch on Windows, navigate to the **bin** folder and run:
+
+```
+elasticsearch.bat
+```
+
+It may take a few minutes, depending on your system. On the first run, the logs will display a default password for logging into Kibana. If you missed it, reset the password using:
+
+```
+elasticsearch-reset-password -u elastic
+```
+
+You’ll need this password later for Kibana and Logstash configurations.
 
 ### Configuring Logstash
 
 Ok now for Logstash part, few configurations need to be taken care of before you run it.
 
-1. Go to Logstash folder and find config folder. And  find .conf folder. In my case it will be logstash-sample.conf file.
-2. Inside this file we will use to create index and connect with our elastic search. You can refer the config below. You may also get it here as well :
+1. Go to the config folder in the Logstash directory.
+
+2. Locate the .conf file (e.g., logstash-sample.conf).
+
+3. Configure it to create an index and connect to Elasticsearch. Here’s an example config:
    https://gist.github.com/syamil24/60ea5061f22230d2a62c72d2c8b6e1c4
-3. And make sure to replace the hosts ip and password with the on given after you have successfully run Elasticsearch
+
+4. Replace the `hosts` IP and password with the credentials from your Elasticsearch setup.
 
 ```conf
 input {
@@ -54,7 +70,7 @@ output{
 }
 ```
 
-Index is a very importation thing in Elasticsearch. Based on its official website, An *Elasticsearch index* is a logical namespace that holds a collection of documents, where each document is a collection of fields. For our case, this log file will be put into and index called **filebeat-demo-%{+YYYY.MM.DD}** as per the Logstash config above, meaning to say that new index will be created daily for every log that we fetched on every day.
+**Index** is a very importation thing in Elasticsearch. Based on its official website, An *Elasticsearch index* is a logical namespace that holds a collection of documents, where each document is a collection of fields. For our case, this log file will be put into and index called **filebeat-demo-%{+YYYY.MM.DD}** as per the Logstash config above, meaning to say that new index will be created daily for every log that we fetched on every day.
 
 To run Logstash in cmd, go to bin folder and execute command `logstash.bat -f config/logstash-sample.conf`. Just wait for a few seconds and Logstash will be successfully run.
 
@@ -62,18 +78,19 @@ To run Logstash in cmd, go to bin folder and execute command `logstash.bat -f co
 
 Configuring Kibana for starter is just a direct process.
 
-1. Just for verification, just go to your Kibana folder and go to **config** folder and kibana.yml
+1. Open `kibana.yml` inside the config folder.
 2. At the end of the file, there will be one entry for **elasticsearch.hosts**
    ![Desktop View](/assets/elk/kibana-config.png)
 
-3. Make sure it is pointing to your correct Elasticsearch URL. By default if you run all ELK stack locally just use the default one which is ['https://localhost:9200'].
+3. Locate elasticsearch.hosts and ensure it points to your elasticsearch ip and port (yes it will be localhost by default):
+['https://localhost:9200'].
 4. Simply go to **bin** folder and run `kibana.bat`
-5. In my case Kibana will takes around 5 minutes to be fully up and running which is quite long time I guess. Your experience might differ.
-6. You can view in web with URL http://localhost:5601
+5. Kibana might take around 5 minutes to fully start—your mileage may vary.
+6. You can view in web with URL http://localhost:5601.
 
 ### Configuring Spring Boot logback.xml
 
-Ok now all three ELK services already up and running. Now It's time for the best and challenging part. Using Filebeat to integrate with Logstash and integrate Filebeat with your Spring Boot log file.
+Now that ELK is running, let’s configure Filebeat to work with Logstash and process Spring Boot logs.
 
 Below is my Spring Boot logback.xml file. I simplified what is the configuration about as below:
 
@@ -116,11 +133,11 @@ Below is my Spring Boot logback.xml file. I simplified what is the configuration
 ### Configuring Filebeat
 
 I had created a gists here for Filebeat configuration.: (https://gist.github.com/syamil24/2a0b06251d33e4cb87d7bf7a2d56d614)
-You can refer below on what are the things need to changed. If your log file format is different than my logback.xml configuration, then you can take a look at tokenizer field and change accordingly. You can refer below pic on what content need to change accordingly especially on your log file paths.
+You can refer below on what are the things need to changed. If your log file format is different than my logback.xml configuration, then you can modify the tokenizer field and change accordingly. You can refer below pic on what content need to change accordingly especially on your log file paths.
 
 ![Desktop View](/assets/elk/filebeat-config.png)
 
-You may also need to change your logstash ip address. If you are using localhost just replace with **127.0.0.1:5044** or **localhost:5044** at this part.
+Update the Logstash IP as well. If running locally, use:
 
 ![Desktop View](/assets/elk/filebeat-config-2.png)
 
@@ -139,13 +156,17 @@ Now we are on the final section of the first part of this tutorial. Let's log in
 
 ### Summary
 
-Congrats you've managed setting up your own ELK stack with Filebeat for monitoring purposes. This is just a basic setup in order to test if everything is working fine on your infra, there's a lot more work to be done such as SSL configuration, scaling it to multiple nodes based on your needs, and aggregating multiple log files such as microservices log into ELK. Oh yes just be remindful that by default Elasticsearch will use up to 32GB of your memory, hence make sure you have plenty of resources in order to scale. You can change this later at **config/jvm.options**
+Congrats you've managed setting up your own ELK stack with Filebeat for monitoring purposes. This is just a basic setup in order to test if everything is working fine on your infra, there's a lot more work to be done such as:
+    - Configure SSL for security.
+    - Scale to multiple nodes if needed.
+    - Aggregate logs from multiple microservices into ELK.
+
+Oh yes just be remindful that by default Elasticsearch will use up to 32GB of your memory, hence make sure you have plenty of resources in order to scale. You can change this later at **config/jvm.options**
 
 Indeed it is consuming your 32GB of memory...
 
-
 ![Desktop View](/assets/elk/elastic-memory.jpg)
 
-In Part 2 of this article I will show on how to add multiple log files into the same Filebeat and ELK instance but with different index. This will be useful if you have a microservices application and want to aggreagate your multiple log files in the same place.
+Stay tuned for Part 2, where I’ll show how to handle multiple log files with different indexes—useful for microservices application.
 
-Thanks for reading really appreciate it !!
+Thanks for reading really appreciate it  🚀 !!
