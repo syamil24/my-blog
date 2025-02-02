@@ -13,12 +13,12 @@ I wrote this article because I found that it's quite hard to find a starter guid
 
 1. Download ELK stack
    First thing first you need to have all three ELK stack (Elastic Search, Logstash, Kibana) installed in your machine. You can download all of it below and extract the compressed file.
-    - https://www.elastic.co/downloads/elasticsearch
-    - https://www.elastic.co/downloads/logstash
-    - https://www.elastic.co/downloads/kibana
+    - <https://www.elastic.co/downloads/elasticsearch>
+    - <https://www.elastic.co/downloads/logstash>
+    - <https://www.elastic.co/downloads/kibana>
 
 2. Download Filebeat
-   https://www.elastic.co/downloads/beats/filebeat
+   <https://www.elastic.co/downloads/beats/filebeat>
 
 3. Existing Spring Boot Project with logfile configured
    If you don't have any Spring Boot project or any logfile configured, you can just download any sample logfile(not necessarily Spring Boot since we only need a structured logfile) online. As for example, you can refer my logback.xml file that will be used to integrate with ELK.
@@ -27,13 +27,13 @@ I wrote this article because I found that it's quite hard to find a starter guid
 
 To start Elasticsearch on Windows, navigate to the **bin** folder and run:
 
-```
+```cmd
 elasticsearch.bat
 ```
 
 It may take a few minutes, depending on your system. On the first run, the logs will display a default password for logging into Kibana. If you missed it, reset the password using:
 
-```
+```cmd
 elasticsearch-reset-password -u elastic
 ```
 
@@ -48,7 +48,7 @@ Ok now for Logstash part, few configurations need to be taken care of before you
 2. Locate the .conf file (e.g., logstash-sample.conf).
 
 3. Configure it to create an index and connect to Elasticsearch. Here’s an example config:
-   https://gist.github.com/syamil24/60ea5061f22230d2a62c72d2c8b6e1c4
+   <https://gist.github.com/syamil24/60ea5061f22230d2a62c72d2c8b6e1c4>
 
 4. Replace the `hosts` IP and password with the credentials from your Elasticsearch setup.
 
@@ -86,7 +86,7 @@ Configuring Kibana for starter is just a direct process.
 ['https://localhost:9200'].
 4. Simply go to **bin** folder and run `kibana.bat`
 5. Kibana might take around 5 minutes to fully start—your mileage may vary.
-6. You can view in web with URL http://localhost:5601.
+6. You can view in web with URL <http://localhost:5601>.
 
 ### Configuring Spring Boot logback.xml
 
@@ -132,7 +132,7 @@ Below is my Spring Boot logback.xml file. I simplified what is the configuration
 
 ### Configuring Filebeat
 
-I had created a gists here for Filebeat configuration.: (https://gist.github.com/syamil24/2a0b06251d33e4cb87d7bf7a2d56d614)
+I had created a gists here for Filebeat configuration.: <https://gist.github.com/syamil24/2a0b06251d33e4cb87d7bf7a2d56d614>
 You can refer below on what are the things need to changed. If your log file format is different than my logback.xml configuration, then you can modify the tokenizer field and change accordingly. You can refer below pic on what content need to change accordingly especially on your log file paths.
 
 ![Desktop View](/assets/elk/filebeat-config.png)
