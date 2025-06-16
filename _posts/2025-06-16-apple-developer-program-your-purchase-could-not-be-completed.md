@@ -9,6 +9,5 @@ date: '2025-06-16'
 
 # Apple Developer Program, Your Purchase Could Not Be Completed Issues & Fix
 
-![Desktop View](/assets/apple-developer/image1.jpg)
 
 I see you are a developer guy here, just stay tuned, Post Coming Up Soon!
