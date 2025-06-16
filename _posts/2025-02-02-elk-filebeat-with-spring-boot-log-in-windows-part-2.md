@@ -141,8 +141,8 @@ As you can see in my picture below I can view multiple log applications in Kiban
 
 You may refer my gists below for full configuration:
 
-1. https://gist.github.com/syamil24/2a0b06251d33e4cb87d7bf7a2d56d614
-2. https://gist.github.com/syamil24/60ea5061f22230d2a62c72d2c8b6e1c4
+1. <https://gist.github.com/syamil24/2a0b06251d33e4cb87d7bf7a2d56d614>
+2. <https://gist.github.com/syamil24/60ea5061f22230d2a62c72d2c8b6e1c4>
 
 ### Takeaways
 

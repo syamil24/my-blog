@@ -1,15 +1,12 @@
 title: Overkill Your Monolithic Spring Boot App With Jenkins Pipeline
-created: '2024-12-07T06:51:36.809Z'
-modified: '2025-02-01T04:17:06.115Z'
+created: '2025-05-07T06:51:36.809Z'
+modified: '2025-06-16T04:17:06.115Z'
 categories: [Programming, IT, coding, Java, devops]
 tags: [coding, IT, devops]
-
-date: '2025-02-02'
 ---
 
 ![Desktop View](/assets/jenkins/image1.jpg)
 
-# Overkill Your Monolithic Spring Boot App With Jenkins Pipeline
 
 You can't really call yourself a software developer if you've never overkilled your monolithic application—with fewer than 10 active users per hour—by throwing sophisticated tools at it just to make a simple app delightfully complex.
 So if you haven’t yet automated your straightforward deployment process with Jenkins, this article might be just what you need.
@@ -24,9 +21,9 @@ In this post, I’ll walk you through how to achieve the following pipeline stag
 
 ### Pre-requisites
 
-1. Jenkins installed. If you're using Ubuntu, you may refer tutorial online here :*https://www.jenkins.io/doc/book/installing/linux/*
+1. Jenkins installed. If you're using Ubuntu, you may refer tutorial online here : <*https://www.jenkins.io/doc/book/installing/linux/*>
 2. OpenSSH installed on both your Ubuntu machine and Windows Server. I'm using SSH key-based authentication instead of username/password.
-   A good guide can be found here: https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+   A good guide can be found here: <https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server>
 3. Your Build Tools or your project framework installed. In my case since I'm using maven and Spring Boot, so I already installed Maven and Java in my Ubuntu OS.
 4. You have this Jenkins Plugin installed:
    - Build Timeout
@@ -204,7 +201,7 @@ stage('Kill Existing Services first') {
        }
    ```
 
-The full script of this can be found in my gists here: https://gist.github.com/syamil24/fb7ec6bc81e7ca62aeaed32b6467872d
+The full script of this can be found in my gists here: <https://gist.github.com/syamil24/fb7ec6bc81e7ca62aeaed32b6467872d>
 
 ### Are you done overkilling your application
 
