@@ -1,8 +1,10 @@
+---
 title: Overkill Your Monolithic Spring Boot App With Jenkins Pipeline
-created: '2025-05-07T06:51:36.809Z'
+created: '2025-06-07T06:51:36.809Z'
 modified: '2025-06-16T04:17:06.115Z'
 categories: [Programming, IT, coding, Java, devops]
 tags: [coding, IT, devops]
+date: '2025-06-07'
 ---
 
 ![Desktop View](/assets/jenkins/image1.jpg)
