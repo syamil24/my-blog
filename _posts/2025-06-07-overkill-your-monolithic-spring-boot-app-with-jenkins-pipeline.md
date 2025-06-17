@@ -23,7 +23,7 @@ In this post, I’ll walk you through how to achieve the following pipeline stag
 
 ### Pre-requisites
 
-1. Jenkins installed. If you're using Ubuntu, you may refer tutorial online here : <*https://www.jenkins.io/doc/book/installing/linux/*>
+1. Jenkins installed. If you're using Ubuntu, you may refer tutorial online here : <https://www.jenkins.io/doc/book/installing/linux/>
 2. OpenSSH installed on both your Ubuntu machine and Windows Server. I'm using SSH key-based authentication instead of username/password.
    A good guide can be found here: <https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server>
 3. Your Build Tools or your project framework installed. In my case since I'm using maven and Spring Boot, so I already installed Maven and Java in my Ubuntu OS.

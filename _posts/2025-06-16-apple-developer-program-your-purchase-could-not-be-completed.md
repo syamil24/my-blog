@@ -53,5 +53,5 @@ My experience after describing in general what is my issue about, after few minu
 Now upon retrying to make the payment, yeah it turns out the issue resolved. I don't know what they did back then but this is the only solution that works for me.
 
 ### Apple Not So Apple
-I'm not an Apple User, being forced to be in this ecosystem due to my client needs. It's not so great experiences as someone who is trying to play around with the Apple Ecosystem. Compared with Android Play Console although the process quite lng as well but the journey was much smoother than this. If somehow you still encounter this issue, maybe one of the solution here might give you some luck. Welcome to Apple then....
+I'm not an Apple User, being forced to be in this ecosystem due to my client needs. It's not so great experiences as someone who is trying to play around with the Apple Ecosystem. Compared with Android Play Console although the process quite long as well but the journey was much smoother than this. If somehow you still encounter this issue, maybe one of the solution here might give you some luck. Welcome to Apple then....
 
