@@ -13,13 +13,13 @@ It's been more than one year when I started working on this project. The 2GB .gi
 
 Since nothing much I can do on the network level (yep this is my company server controlled by the Infra team), the choices I left only on trying to reduce the git size so that with slower network speed it will still managed to execute the command without reaching the timeout.
 
-P/s: If you are using Windows, you need to use Git Bash terminal as some of the commands does not work properly in CMD or Windows Terminal. Yes make sure to run this in admin as well
+P/s: If you are using Windows, you need to use **Git Bash terminal or Linux Terminal** as some of the commands does not work properly in CMD or Windows Terminal. Yes make sure to run this in admin as well
 
-**### Finding the root cause... Windows Dump File ???**
+### Finding the root cause... Windows Dump File ???
 
 And here is where the phase where searching online got me an idea that the reason why .git folder size is too big is due to somebody has commit unnecessary large files in your codebase. Searching online gave me few commands related on this but none of it is the exact of what I want. And here ChatGPT comes to help. Asking some prompt, providing some context and ChatGPT gave me this where it will automatically sort top 10 largest objects in my commit history:
 
-```cmd
+```bash
 git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sort -k3 -n -r | head -n 10
 ```
 
@@ -27,7 +27,7 @@ BAM!! All the top 10 largest files in my commit history listed out here. And gue
 
 ![Desktop View](/assets/git-size-reduce/git2.png)
 
-**### git-filter-repo comes to the rescue**
+### git-filter-repo comes to the rescue
 
 So how do I get rid of these unncessary commits in my repo? This is where git-filter-repo useful where it will rewrite git repository history and remove these related commits. According to their github repo, filter-repo requires:
 
@@ -45,13 +45,13 @@ pip install git-filter-repo # (need to run as admin)
 Once installed, this is the most important one where you will delete all commit history that contains the large file and rewrite back the commit tree.
 Reminder: this command is **destructive**! since it will rewrite your commit tree and will remove the remote origin url you have configured  in the project. So make sure you have a backup to prepare for worst case scenario.
 
-```cmd
+```bash
 git filter-repo --force --path-glob *.dmp --invert-paths
 ```
 
 Then, since your origin url is removed, add back your remote origin url. And now time to push it back to your remote origin and rewrite the commit tree in the remote. To be safe, checkout to another branch first before commit directly to your main/master branch.
 
-```cmd
+```bash
 git remote add origin https://YOUR_REMOTE_URL
 git push origin --force --all
 git push origin --force --tags
