@@ -17,13 +17,15 @@ P/s: If you are using Windows, you need to use Git Bash terminal as some of the 
 
 **### Finding the root cause... Windows Dump File ???**
 
-And here is where the phase where searching online got me an idea that the reason why .git folder size is too big is due to somebody has commit unnecessary large files in your codebase. Searching online gave me few commands related on this but none of it is the exact of what I want. And here ChatGPT comes to help. Asking some prompt, providing some context and ChatGPT gave me this:
+And here is where the phase where searching online got me an idea that the reason why .git folder size is too big is due to somebody has commit unnecessary large files in your codebase. Searching online gave me few commands related on this but none of it is the exact of what I want. And here ChatGPT comes to help. Asking some prompt, providing some context and ChatGPT gave me this where it will automatically sort top 10 largest objects in my commit history:
 
 ```cmd
-git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | grep '^blob' | sort -k3 -n -r | head -n 10
+git rev-list --objects --all | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' | sort -k3 -n -r | head -n 10
 ```
 
 BAM!! All the top 10 largest files in my commit history listed out here. And guess what, back few years when this project was kick started some random developer just push .dmp files in this repo. WTH?? How come you are copying this dump file in your repo directory and somehow committed it? Bruh....
+
+![Desktop View](/assets/git-size-reduce/git2.png)
 
 **### git-filter-repo comes to the rescue**
 
@@ -60,10 +62,10 @@ And that's it. I managed to reduced my .git folder from 2gb to just 16mb as scre
 ### More ways to explore
 
 **git-filter-repo** offering much more features in terms of rewriting git commit history than what I've shown here. Check out it repo here to learn more:
-https://github.com/newren/git-filter-repo
+<https://github.com/newren/git-filter-repo>
 
 You can find all the commands above in my gist here, just copy and paste to your project
-https://gist.github.com/syamil24/fe79aa1d54ebf8ae91cc487f668e10cb
+<https://gist.github.com/syamil24/fe79aa1d54ebf8ae91cc487f668e10cb>
 
 And there could more other ways to explore to achieve the same objective. Perhaps you can find a better one than this!
 
