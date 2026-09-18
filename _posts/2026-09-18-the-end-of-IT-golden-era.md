@@ -1,0 +1,22 @@
+---
+title: Red Flag I Encountered During My Interview as A Software Engineer
+created: '2026-09-18T06:51:36.809Z'
+modified: '2026-09-187T04:17:06.115Z'
+categories: [Programming, IT, coding, Java]
+tags: [coding, IT]
+date: '2026-09-18'
+---
+
+I hate to write this, but deep inside there is an urge for me to write. Honestly its a mixed feelings, I feel scared, and at some points it does feel good. Market is completing its cycle.
+
+Back then when IT job market is a privilege, nobody knows how we works yet only us knows how the paycheck was. Those who know, know how decent it is. Yeah we were very low profile, I think the main reason it is like that because we got nothing to tell in social media. There is no damn sophisticated machine you can flex like the engineers, just laptop with VsCode in front of you and it rarely bring any engagement to you. Yeah people just dont know, how would they react on that lol.  Apart from that another main reason is we are too nerds I mean not all but most of us just a nerdy guy with introvert character. Wearing a hoodie, eating alone, people already know this guy must be the IT dept.  And it already became a meme on how we looks like. We dont tell people how we do our job because we are too introvert to expose that. 
+
+Back then there is less competition, you rarely see More than 100 apply for an IT job in LinkedIn (except a big company like MNC etc). Although getting a job is still quite hard, but hey at least getting the interview much more easier than today. Previously you already aim which company you want to go for, but now just spamming the apply button for all jobs until you get a reply from the HR. Nah its not HR, it just auto generated email "Thank you for your interest in xx company. We are regret to tell you ...". 
+
+And obviously we all know the main culprit behind this is AI. There is a quote of AI that I heard few people keep phrasing about it: "AI is very good when you already specialized in that field, but is very dumb when you don't know about that thing and ask AI to do it". I guess this is partially true, but in the end AI did delivers their job for them. Ignoring the security, performance issue and so on, but they did it. A normal person does not even care what happen behind the scene until something breaks, they only care what they see on the front and AI delivers that. And these people flexing themselves their achievement without even knowing how to carefully deal with an .env file.
+
+Maybe we can say that the market is correcting itself after so long, but we need a thing to blame right, and its AI for sure. AI is breaking down the barrier for a normal person to dive into tech, and especially building a system. When the barrier breaks, same goes to the market. Although it does not really crash, but its feel different this time. The barrier broke not purely because of AI, but the people around it as well. Content creator, influencer, vibe coders are flexing itself in social media on how they use AI to do IT jobs. Whether the common one like build a site until the automation itself. These people are creating a wave of people to more and more keen to deep dive into IT markets.  And eventually they think of a carrier change to IT.
+
+You barely managed to get an interview, one position being applied for more than 100 people like what is this....we are not even go into the compensation yet. Vibe coders are everywhere, applying the same job with us. And here it comes on the salary wise. Although that I dont have any real data to backup my statement, but I can see myself online getting a decent payout job is much much harder than before. You can only see average rate payout being offered even for a senior position. The only decent payout is for the specialist, principal and lead level. Very less headcount open for these roles. 
+
+And here I think where the market will goes (Though that I heard somehwhere said this opinion already). IT job markets will eventually become a general jobs just slightly above clerk positon. I'm worried but there's nothing that I can do to control it. Just embrace it. The only lucrative jobs are for the specialized and lead position. Any person can build an app now, but not everyone knows deep dive how the app works end to end. And that is for the specialized position to handle it. That's how the market correcting itself, until there is one thing that can beat AI, whether it is bad or good, this is how the market will goes. I hope it does turn out the wrong way, but its very sad if this is the truth.
